@@ -6,7 +6,12 @@ addEventListener('fetch', event => {
  * @param {Request} request
  */
 async function handleRequest(request) {
-  return new Response('Hello worker!', {
-    headers: { 'content-type': 'text/plain' },
-  })
+	  let response = await fetch("https://drand.cloudflare.com/public/latest");
+	  let data = await response.json();
+	  return new Response( JSON.stringify(data), {
+	    headers: { 
+	    	'content-type': 'application/json',
+	    	'Access-Control-Allow-Origin': '*'
+	    },
+	  })
 }

@@ -1,6 +1,6 @@
 name = "vax-worker"
 type = "javascript"
-account_id = ""
+account_id = "44441e30d48519d3471641daf87af00b"
 workers_dev = true
 route = ""
 zone_id = ""
